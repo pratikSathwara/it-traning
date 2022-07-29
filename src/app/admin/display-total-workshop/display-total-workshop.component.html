@@ -1,0 +1,32 @@
+<div class="print-event">
+    <div class="container">
+        <h2>Total Workshop</h2>
+        <div class="table-responsive table-design">
+        <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>src</th>
+        <th>title</th>
+        <th>date</th>
+        <th>description</th>
+        <th>Edit data</th>
+        <th>Delete data</th>
+    </tr>
+</thead>
+    <tbody>
+    <tr *ngFor="let s of mydata | async">
+        <td>{{s.id}}</td>
+        <td><img src="{{imgpath}}{{s.src}}" alt="" width="80px"> </td>
+        <td title="{{s.title}}">{{s.title}}</td>
+        <td title="{{s.date}}">{{s.date}}</td>
+        <td title="{{s.description}}">{{s.description}}</td>
+        <td><span  class="btn btn-success" [routerLink]="['editworkshop/',s.id]">Edit</span></td>
+        <td><span (click)="delete(s.id)" class="btn btn-danger">Delete</span></td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>

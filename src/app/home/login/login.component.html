@@ -1,0 +1,29 @@
+<div class="banner banner-login">
+     <div class="login">
+        <h2>Login</h2>
+        <form [formGroup]="pass" (ngSubmit)="logindata()">
+           <div class="inputBox">
+              <input type="text" id="username" name="username" formControlName="username"/>
+              <label><i class="fa fa-user"></i> Username</label>
+              <span class="text-danger" *ngIf="!username?.valid && (username?.touched || username?.dirty)" >
+                  Please enter your email /username
+               </span>
+           </div>
+           <div class="inputBox">
+              <input type="psw" id="psw" name="psw" formControlName="psw" />
+              <label><i class="fa fa-eye" aria-hidden="true"></i> Password</label> 
+
+              <span class="forgot"><a href="forgot-pass.html">Forgot Password ?</a> </span>
+
+              <span class="text-danger" *ngIf="!psw?.valid && (psw?.touched || psw?.dirty)" >
+                  Please enter your password
+               </span>
+           </div>
+           <button type="login" class="btn btn-primary btn-block" > Login </button>
+           <div class="go_regster">Not a member yet?<br>
+           <a routerLink="/admin/addadmin" title="Sign Up"> Sign Up For User</a><br>
+           <div class="go_regster"><a routerLink="/" title="Sign Up" class="text-success"> Back To Home</a></div>
+        </div>
+        </form>
+     </div>
+  </div>

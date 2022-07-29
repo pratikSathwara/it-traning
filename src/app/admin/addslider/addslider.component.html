@@ -1,0 +1,67 @@
+<div class="container">
+    <form [formGroup]="signupform" >
+        <div class="form-group">
+  
+            <input type="file" formControlName="image" name="image"  (change)=onselectedFile()  [(ngModel)]="editdata.image" class="form-control">
+            <span class="text-danger" *ngIf="!image?.valid && (image?.touched || image?.dirty)" >
+                Please enter your src 
+             </span>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="masg" name="masg" id="masg"  class="form-control" [(ngModel)]="editdata.masg" placeholder="enter msg">
+            <span class="text-danger" *ngIf="!masg?.valid && (masg?.touched || masg?.dirty)" >
+                Please enter your src 
+             </span> 
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="name" name="name" id="name"  class="form-control" [(ngModel)]="editdata.name" placeholder="enter name">
+            <span class="text-danger" *ngIf="!name?.valid && (name?.touched || name?.dirty)" >
+                Please enter your src 
+             </span> 
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="city" name="city" id="city"  class="form-control" [(ngModel)]="editdata.city" placeholder="enter city">
+            <span class="text-danger" *ngIf="!city?.valid && (city?.touched || city?.dirty)" >
+                Please enter your src 
+             </span> 
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" (ngSubmit)="submitdata(signupform)">Submit</button>
+            <!-- [disabled]="!signupform?.valid" -->
+        </div>
+    </form>
+</div>
+
+
+<div class="print-event">
+    <div class="container">
+        <h2>Display slider</h2>
+        <div class="table-responsive table-design">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>image</th>
+                <th>masg</th>
+                <th>name</th>
+                <th>city</th>
+                <th>Edit data</th>
+                <th>Delete data</th>
+            </tr>
+        </thead>
+            <tbody>
+            <tr *ngFor="let display of dis">
+                <td>{{display.id}}</td>
+                <td><img src="{{imgpath}}{{display.image}}" alt="" width="80px"> </td>
+                <td>{{display.masg}}</td>
+                <td title="{{display.name}}">{{display.name}}</td>
+                <td title="{{display.city}}">{{display.city}}</td>
+                <td > <span class="btn btn-success" (click)="edit(display.id)">Edit data </span>  </td>
+                <td > <span class="btn btn-danger" (click)="deleteslider(display.id)">Delete data </span>  </td>
+                
+            </tr>
+        </tbody>
+        </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="upcoming-bg" id="WORKSHOP">
+    <h2 class="upcoming-m-tit">UPCOMING WORKSHOP <span>FOR FREE</span></h2>
+    <div class="container">
+       <div class="row">
+          <div class="col-md-4" *ngFor="let dat of pushdata">
+             <div class="upcoming-bx">
+                <div class="upcoming-part1">
+                   <img src="{{imgpath}}{{dat.src}}" alt=""> 
+                </div>
+                <div class="upcoming-part2">
+                   <h4 class="upcoming-text-tit">{{dat.title}} </h4>
+                   <h5 class="upcoming-text-date">{{dat.date}}<span>Save The Date</span></h5>
+                   <p class="upcoming-text-desc">{{dat.description}}</p>
+                   <a routerLink="registerworkshop" routerLinkActive="active" class="box_btn">Registor Now</a>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+ <div class="prof-slider">
+    <div class="container">
+       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <!-- <ol class="carousel-indicators" *ngFor="let msgdata of msgpass">
+             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+             <li data-target="#myCarousel" data-slide-to="1"></li>
+             <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol> -->
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+             <div class="item active">
+                <div class="client_box">
+                   <img src="./assets/img/person2.png" class="box_person_img" />
+                   <p>Please allow this memo to express our sincere thanks for the excellent job that your sales staff and technicians did on our home. 
+                      As President of a commercial construction company, I certainly have seen my share of "issues" relative to processing work. Your firm has exceeded every expectation. We had three bids and I am glad we chose March & Martin. Thank you and GREAT JOB!
+                   </p>
+                   <h6><span class="orange_color">Stephen M</span> <span class="blue_color">- Plum Island</span></h6>
+                </div>
+             </div>
+             <div class="item"  *ngFor="let msgdata of msgpass">
+                <div class="client_box">
+                   <img src="{{imgpath}}{{msgdata.image}}" class="box_person_img" />
+                   <p>{{msgdata.masg}}</p>
+                   <h6><span class="orange_color">{{msgdata.name}}</span> <span class="blue_color">- {{msgdata.city}}</span></h6>
+                </div>
+             </div>
+          </div>
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+          </a>
+       </div>
+    </div>
+ </div>

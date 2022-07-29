@@ -1,0 +1,42 @@
+<div class="print-event">
+    <div class="container">
+        <h2>Total Admins</h2>
+        <div class="table-responsive table-design">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>fullname</th>
+                <th>imgpath</th>
+                <th>username</th>
+                <th>password</th>
+                <th>Gender</th>
+                <th>mobileno</th>
+                <th>address</th>
+                <th>Edit Data</th>
+                <th>Delete Data</th>
+            </tr>
+        </thead>
+            <tbody>
+            <tr *ngFor="let display of mydata">
+                <td>{{display.id}}</td>
+                <td title="{{display.fullname}}">{{display.fullname}}</td>
+                <td><img src="{{imgpath}}{{display.imgpath}}" alt="" width="80px"> </td>
+                <td><a href="mailto:{{display.username}}" title="{{display.username}}">{{display.username}}</a></td>
+                <td title="{{display.psw}}">{{display.psw}}</td>
+                <td title="{{display.gender}}">{{display.gender}}</td>
+                <td title="{{display.mobileno}}">{{display.mobileno}}</td>
+                <td title="{{display.address}}">{{display.address}}</td>
+                <td > <span class="btn btn-success" routerLink="editadmin/{{display.id}}">Edit </span>  </td>
+                <td > <span class="btn btn-danger" (click)="deletedata(display.id)">Delete </span>  </td>
+                
+            </tr>
+        </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+
+
+<router-outlet></router-outlet>

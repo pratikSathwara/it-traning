@@ -1,0 +1,31 @@
+<div class="print-event">
+    <div class="container">
+        <h2>Workshop Register Entry</h2>
+        <div class="table-responsive table-design">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+                <th>email</th>
+                <th>title</th>
+                <th>study</th>
+                <th>address</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+            <tbody>
+            <tr *ngFor="let pdata of printdata">
+                <td>{{pdata.id}}</td>
+                <td title="{{pdata.name}}">{{pdata.name}}</td>
+                <td><a href="mailto:{{pdata.email}}" title="{{pdata.email}}">{{pdata.email}}</a></td>
+                <td title="{{pdata.title}}">{{pdata.title}}</td>
+                <td title="{{pdata.study}}">{{pdata.study}}</td>
+                <td title="{{pdata.address}}">{{pdata.address}}</td>
+                <td><span (click)="delete(pdata.id)" class="btn btn-danger">Delete</span></td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+    </div></div>
+    

@@ -1,0 +1,39 @@
+<div class="add-workshop">
+    <div class="container">
+        <h2 >Add New Workshop</h2>
+        <div class="row">
+            <div class="col-xs-12">
+            <form [formGroup]="passdata" (ngSubmit)="submitdata(passdata)">
+                    <div class="form-group">
+                <input type="file" formControlName="src"  id="src" name="src"  (change)=onselectedFile()  [(ngModel)]="data"  placeholder="enter title" class="form-control"/>
+                <span class="text-danger" *ngIf="!src?.valid && (src?.touched || src?.dirty)" >
+                    Please enter your src 
+                 </span> 
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="title" name="title" placeholder="enter title" class="form-control" />
+                <span class="text-danger" *ngIf="!title?.valid && (title?.touched || title?.dirty)" >
+                    Please enter your title 
+                 </span> 
+            </div>
+            <div class="form-group">
+                <input type="date" formControlName="date" name="date" placeholder="enter title" class="form-control" />
+                <span class="text-danger" *ngIf="!date?.valid && (date?.touched || date?.dirty)" >
+                    Please enter your date 
+                 </span> 
+            </div>
+            <div class="form-group">
+                <textarea formControlName="description" name="description" placeholder="enter description" class="form-control input-lg"></textarea>
+                <span class="text-danger" *ngIf="!description?.valid && (description?.touched || description?.dirty)" >
+                    Please enter your description 
+                 </span> 
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn-lg" [disabled]="!passdata?.valid">Submit</button>
+            </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    </div> 
+    

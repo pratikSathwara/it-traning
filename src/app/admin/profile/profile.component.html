@@ -1,0 +1,74 @@
+
+
+    <div class="container">
+  
+          <h2>Edit Form</h2>
+          <br>
+          <form [formGroup]="paddingdata" (ngSubmit)="editdatas(paddingdata)">
+         
+             <div class="form-group">
+                 <b><i class="fa fa-user"></i> fullname :</b>
+               <input type="text" name="fullname" id="fullname" class="form-control" formControlName="fullname" [(ngModel)]="editdata.fullname" />
+               <!-- <label for="fullname"><i class="fa fa-user"></i> fullname :</label> -->
+               <span class="text-danger" *ngIf="!fullname?.valid && (fullname?.touched || fullname?.dirty)" >
+                 Please enter your fullname 
+              </span> 
+            </div>
+              <div class="form-group">
+                <b><i class="fa fa-user"></i> UserName :</b>
+                <input type="text" name="username" id="username" class="form-control" formControlName="username" [(ngModel)]="editdata.username" />
+                <span class="text-danger" *ngIf="!username?.valid && (username?.touched || username?.dirty)" >
+                  Please enter your username 
+               </span> 
+             </div>
+              <div class="form-group"> 
+                  <b><i class="fa fa-eye" aria-hidden="true"></i> password :</b>
+                <input type="text" id="psw" name="psw" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" formControlName="psw" [(ngModel)]="editdata.psw">
+                <span class="text-danger" *ngIf="!psw?.valid && (psw?.touched || psw?.dirty)" >
+                  Please enter your password 
+               </span> 
+          </div>
+
+             <div class="form-group">  
+               <b><i class="fa fa-transgender" aria-hidden="true"></i>&nbsp; Gender : </b> &nbsp;
+               <label><input type="radio" name="gender" id="Male" formControlName="gender" [(ngModel)]="editdata.gender" value="Male" /> Male </label> &nbsp;&nbsp;
+               <label><input type="radio" name="gender" id="Female" formControlName="gender" [(ngModel)]="editdata.gender" value="Female"/> FeMale</label>
+                <span class="text-danger" *ngIf="!gender?.valid && (gender?.touched || gender?.dirty)" >
+                  Please enter gender 
+               </span> 
+             </div>
+              <div class="form-group">
+                  <b><i class="fa fa-phone" aria-hidden="true"></i> Mobile Number : </b>
+                <input type="number" id="mobileno" class="form-control" pattern="\d{3}[\-]\d{3}[\-]\d{4}" formControlName="mobileno" [(ngModel)]="editdata.mobileno" />
+                <span id="mobileerror" class="text-danger font-weight-bold"></span>
+                <!-- <label><i class="fa fa-phone" aria-hidden="true"></i> Mobile Number :</label> -->
+                <span class="text-danger" *ngIf="!mobileno?.valid && (mobileno?.touched || mobileno?.dirty)" >
+                  Please enter your mobileno 
+               </span> 
+             </div>
+             <div class="form-group">
+                 <b><i class="fa fa-phone" aria-hidden="true"></i> Address : </b>
+                <input type="text" id="address" class="form-control" name="address" formControlName="address" [(ngModel)]="editdata.address" />
+                <span class="forgot locate"><a href="#"><i class="fa fa-map-marker"></i></a> </span>
+                <!-- <label><i class="fa fa-phone" aria-hidden="true"></i> Address</label> -->
+                <span class="text-danger" *ngIf="!address?.valid && (address?.touched || address?.dirty)" >
+                  Please enter your address 
+               </span> 
+             </div>
+              <div class="form-group">
+                  <b>edit Profile : </b>
+               <input type="file" name="imgpath" class="form-control" id="imgpath" formControlName="imgpath" (change)=onselectedFile() [(ngModel)]="editdata.imgpath"  />
+               <!-- <label for="fullname"><i class="fa fa-user"></i> SRC :</label> -->
+            </div>
+             <div class="text-center">
+             <button class="btn btn-success btn-lg" class="btn btn-success" type="submit" >Edit Data</button>
+
+             <h4>Already have an account?<a routerLink="/login" title="Sign Up"> Sign In</a></h4>
+             <h5><a routerLink="/" title="Sign Up" class="btn btn-primary"><i class="fa fa-home"></i> Back To Home</a></h5>
+             </div>
+          </form>
+       </div> 
+
+
+
+ 

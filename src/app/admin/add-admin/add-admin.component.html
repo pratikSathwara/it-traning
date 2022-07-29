@@ -1,0 +1,80 @@
+<div class="container">
+       <div class="register">
+          <h2>Add Admin</h2>
+          <form [formGroup]='signupform' (ngSubmit)="submitdata(signupform)">
+            <div class="inputBox">
+                <input type="text" name="fullname" id="fullname" formControlName="fullname" required/>
+                <label for="fullname"><i class="fa fa-user"></i>&nbsp; fullname :</label>
+                <div class="text-danger" *ngIf="!fullname?.valid && (fullname?.touched || fullname?.dirty)">
+                  please enter your full name
+                </div>
+             </div>
+             <div class="inputBox">
+                <input type="text" name="username" id="username" formControlName="username"  required/>
+                <label for="username"><i class="fa fa-envelope"></i>&nbsp; UserName :</label>
+                <span *ngIf="!fullname?.valid && (fullname?.touched || fullname?.dirty)">
+                  required
+                </span>
+             </div>
+             <div class="inputBox">    
+                <input type="text" id="psw" name="psw"  formControlName="psw" required>
+                <label><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Password</label> 
+                <div class="text-danger" *ngIf="!psw?.valid && (psw?.touched || psw?.dirty)">
+                  please enter your full name
+                </div>
+          </div>
+             <div class="inputBox">    
+                <input type="text" name="conformpass" id="conformpass" formControlName="conformpass" required/>
+                <label><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Confirm Password : </label>
+                <div *ngIf="conformpass.errors" class="text-success">
+                  <span *ngIf="conformpass.errors.required" >
+                    please enter confirm password
+                  </span>
+                  <span *ngIf="conformpass.errors.MustMatch" >
+                    Password dosen't matched
+                  </span>
+               </div>
+           
+           
+             </div>
+             <div class=" radiobtn">
+               <label><i class="fa fa-transgender" aria-hidden="true"></i>&nbsp; Gender : </label>
+               <label><input type="radio" name="gender" id="Male" formControlName="gender"  value="Male" /> Male </label>
+               <label><input type="radio" name="gender" id="Female" formControlName="gender"  value="Female"/> FeMale</label>
+               <div class="text-danger" *ngIf="!gender?.valid && (gender?.touched || gender?.dirty)">
+                  please enter your full name
+                </div>
+             </div>
+             <div class="inputBox">
+                <input type="number" id="mobileno"  formControlName="mobileno" required/>
+                <label><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; Mobile Number :</label>
+                <div class="text-danger" *ngIf="!mobileno?.valid && (mobileno?.touched || mobileno?.dirty)">
+                  please enter your full name
+                </div>
+             </div>
+             <div class="inputBox addressBx">
+                <input type="text" id="address" name="address" formControlName="address" required/>
+                <span class="forgot locate"><a href="#"><i class="fa fa-map-marker"></i></a> </span>
+                <label><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Address</label>
+                <div class="text-danger" *ngIf="!address?.valid && (address?.touched || address?.dirty)">
+                  please enter your full name
+                </div>
+             </div>
+             <div class="inputBox">
+               <input type="file" name="imgpath" id="imgpath" formControlName="imgpath" (change)=onselectedFile() [(ngModel)]="data" />
+               <label for="fullname"><i class="fa fa-user"></i>&nbsp; SRC :</label>
+               <div class="text-danger" *ngIf="!imgpath?.valid && (imgpath?.touched || imgpath?.dirty)">
+                  please enter your full name
+                </div>
+            </div>
+            
+             <div class="text-center">
+             <button class="btn btn-success btn-lg" [disabled]="!signupform.valid">Register</button>
+             <span class="go_regster">Already have an account?<a routerLink="/login" title="Sign Up"> Sign In</a></span>
+             <span class="go_regster"><a routerLink="/" title="Sign Up"> Back To Home</a></span>
+             </div>
+         
+          </form>
+       </div> 
+    </div>
+

@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-3">
+
+       <div class="thumbnail blue_bg_color">
+          <span *ngFor="let s of imgpathid;last as i ;">
+             <h3 *ngIf="i">
+                Total Admin : {{s.id}} 
+             </h3>      
+       </span>
+       </div>
+       </div>
+       <div class="col-md-3">
+       <div class="thumbnail blue_bg_color">
+          <span *ngFor="let s of sliderid;last as i ;">
+             <h3 *ngIf="i">
+                Total Slider : {{s.id}} 
+             </h3>      
+       </span>
+       </div>
+    </div>
+    <div class="col-md-3">
+       <div class="thumbnail blue_bg_color">
+          <span *ngFor="let s of workshop;last as i ;">
+             <h3 *ngIf="i">
+                Total Workshop : {{s.id}} 
+             </h3>      
+       </span>
+       </div>
+    </div>
+    <div class="col-md-3">
+       <div class="thumbnail blue_bg_color">
+          <span *ngFor="let s of workshopreg;last as i ;">
+             <h3 *ngIf="i">
+                Total Regristration Workshop : {{s.id}} 
+             </h3>      
+       </span>
+       </div>
+    </div>
+    <div class="col-md-3">
+       <div class="thumbnail blue_bg_color">
+          <span *ngFor="let s of contact;last as i ;">
+             <h3 *ngIf="i">
+                Total Contact Message : {{s.id}} 
+             </h3>      
+       </span>
+       </div>
+    </div>
+ </div>
+{{200 | mypipe}}

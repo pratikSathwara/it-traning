@@ -1,0 +1,91 @@
+
+<div class=" banner-login">
+    <div class="container">
+       <div class="register">
+          <h2>Edit Form</h2>
+          <div class="row">
+            <div class="col-xs-12">
+          <form [formGroup]="paddingdata" >
+         
+             <div class="inputBox">
+               <input type="text" name="fullname" id="fullname" formControlName="fullname" [(ngModel)]="editdata.fullname" />
+               <label for="fullname"><i class="fa fa-user"></i> fullname :</label>
+               <span class="text-danger" *ngIf="!fullname?.valid && (fullname?.touched || fullname?.dirty)" >
+                 Please enter your fullname 
+              </span> 
+            </div>
+             <div class="inputBox">
+                <input type="text" name="username" id="username" formControlName="username" [(ngModel)]="editdata.username" />
+                <label for="username"><i class="fa fa-user"></i> UserName :</label>
+                <span class="text-danger" *ngIf="!username?.valid && (username?.touched || username?.dirty)" >
+                  Please enter your username 
+               </span> 
+             </div>
+             <div class="inputBox">    
+                <input type="password" id="psw" name="psw"  formControlName="psw" [(ngModel)]="editdata.psw">
+                <label><i class="fa fa-eye" aria-hidden="true"></i> Password</label> 
+                <span class="text-danger" *ngIf="!psw?.valid && (psw?.touched || psw?.dirty)" >
+                  Please enter your password 
+               </span> 
+          </div>
+          <div class="inputBox">    
+            <input type="text" name="conformpass" id="conformpass" formControlName="conformpass" required/>
+            <label><i class="fa fa-eye" aria-hidden="true"></i>&nbsp; Confirm Password : </label>
+            <div *ngIf="conformpass.errors" class="text-success">
+              <span *ngIf="conformpass.errors.required" >
+                please enter confirm password
+              </span>
+              <span *ngIf="conformpass.errors.MustMatch" >
+                Password dosen't matched
+              </span>
+           </div>
+         </div>
+             <div class=" radiobtn">
+               <label><i class="fa fa-transgender" aria-hidden="true"></i>&nbsp; Gender : </label>
+               <label><input type="radio" name="gender" id="Male" formControlName="gender" [(ngModel)]="editdata.gender" value="Male" /> Male </label>
+               <label><input type="radio" name="gender" id="Female" formControlName="gender" [(ngModel)]="editdata.gender" value="Female"/> FeMale</label>
+                <span class="text-danger" *ngIf="!gender?.valid && (gender?.touched || gender?.dirty)" >
+                  Please enter gender 
+               </span> 
+             </div>
+             <div class="inputBox">
+                <input type="number" id="mobileno" formControlName="mobileno" [(ngModel)]="editdata.mobileno" />
+                <span id="mobileerror" class="text-danger font-weight-bold"></span>
+                <label><i class="fa fa-phone" aria-hidden="true"></i> Mobile Number :</label>
+                <span class="text-danger" *ngIf="!mobileno?.valid && (mobileno?.touched || mobileno?.dirty)" >
+                  Please enter your mobileno 
+               </span> 
+             </div>
+             <div class="inputBox addressBx">
+                <input type="text" id="address" name="address" formControlName="address" [(ngModel)]="editdata.address" />
+                <span class="forgot locate"><a href="#"><i class="fa fa-map-marker"></i></a> </span>
+                <label><i class="fa fa-phone" aria-hidden="true"></i> Address</label>
+                <span class="text-danger" *ngIf="!address?.valid && (address?.touched || address?.dirty)" >
+                  Please enter your address 
+               </span> 
+             </div>
+             <div class="inputBox">
+              <input type="text" name="imgpath" formControlName="imgpath" readonly>
+               <input type="file" name="imgpath" id="imgpath"  (change)=onselectedFile() formControlName="imgpath" [(ngModel)]="editdata.imgpath"  />
+               <label for="fullname"><i class="fa fa-user"></i> SRC :</label>
+            </div>
+           
+           
+            
+             <div class="text-center">
+              <div class="btn-group">
+             <button class="btn btn-success btn-lg" type="submit" (ngSubmit)="editdatas()">Submit Data</button>
+             <button class="btn btn-danger btn-lg" (click)="close()" >Close</button>
+            </div>
+             <div class="go_regster">Already have an account?<a routerLink="/login" title="Sign Up"> Sign In</a></div>
+             <div class="go_regster"><a routerLink="/" title="Sign Up"> Back To Home</a></div>
+             </div>
+          </form>
+       </div> 
+    </div>
+ </div></div></div>
+
+
+
+
+ 

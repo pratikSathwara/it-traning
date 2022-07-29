@@ -1,0 +1,33 @@
+
+     <div class="login">
+        <h2>Change Password</h2>
+        <form [formGroup]="changepass" (ngSubmit)="logindata(changepass)">
+           <!-- <div class="inputBox">
+              <input type="text" id="psw" name="psw" formControlName="psw" [(ngModel)]="changep.psw" required readonly/>
+              <label><i class="fa fa-user"></i> Enter New Password </label>
+              <span class="text-danger" *ngIf="!psw?.valid && (psw?.touched || psw?.dirty)" >
+                  Please enter your current password
+               </span>
+           </div> -->
+
+           <div class="inputBox">
+              <input type="text" id="psw" name="psw" formControlName="psw" [(ngModel)]="changep.psw" />
+              <label><i class="fa fa-eye" aria-hidden="true"></i>New Password</label> 
+              <span class="text-danger" *ngIf="!newpass?.valid && (newpass?.touched || newpass?.dirty)" >
+                  Please enter your password
+               </span>
+           </div>
+           <!-- <div class="inputBox">
+            <input type="password" id="psw" name="psw"  />
+            <label><i class="fa fa-eye" aria-hidden="true"></i>Re-Type Password</label> 
+         </div> -->
+           <button type="login" class="btn btn-primary btn-block"> Change Password </button>
+           <div class="text-center">
+           <div class="go_regster">Not a member yet?<br>
+           <a routerLink="/register" title="Sign Up"> Sign Up For User</a><br>
+           <div class="go_regster"><a routerLink="/admin" title="Sign Up" class="text-success"> Back To Home</a></div>
+        </div>
+      </div>
+        </form>
+     </div>
+

@@ -1,0 +1,27 @@
+<div class="print-event">
+    <div class="container">
+        <h2>Contect Messages</h2>
+        <table class="table table-bordered table-striped table-design">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>msgs</th>
+                <th>Delete data</th>
+            </tr>
+        </thead>
+            <tbody>
+            <tr *ngFor="let cmsg of contactArry">
+                <td>{{cmsg.id}}</td>
+                <td title="{{cmsg.name}}">{{cmsg.name}}</td>
+                <td><a href="mailto:{{cmsg.email}}" title="{{cmsg.email}}">{{cmsg.email}}</a></td>
+                <td title="{{cmsg.phone}}">{{cmsg.phone}}</td>
+                <td title="{{cmsg.msgs}}">{{cmsg.msgs}}</td>
+                <td><span (click)="delete(cmsg.id)" class="btn btn-danger">Delete data</span></td>
+            </tr>
+        </tbody>
+        </table>
+    </div></div>
+  

@@ -1,0 +1,10 @@
+.first-bx{
+    background-color: ivory;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+.first-bx .profile-img{
+    width: 120px;
+    border-radius: 100%;
+}

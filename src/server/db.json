@@ -1,0 +1,225 @@
+{
+  "event": [
+    {
+      "id": 1,
+      "src": "person2.png",
+      "title": "pratik",
+      "date": "27-oct-2020",
+      "description": "enter some text enter some text enter some text enter some text dsfsf"
+    },
+    {
+      "id": 2,
+      "src": "about_studio_img_1.jpg",
+      "title": "Graphic WORKSHOP fdgdfg",
+      "date": "2022-07-06",
+      "description": "enter some text enter some texenter some text enter some text enter some text enter some text fgdfgdfg"
+    },
+    {
+      "id": 3,
+      "src": "bootstrap.webp",
+      "title": "HTML 5 WORKSHOP",
+      "date": "2022-07-08",
+      "description": "enter some text enter some text enter some text enter some text enter some text enter some text enter some text erer"
+    },
+    {
+      "id": 4,
+      "src": "person2.png",
+      "title": "ddfgdfgddfg",
+      "date": "2022-07-06",
+      "description": "ggggggggggggggggdfgfggdfgfdddddddddddddd"
+    },
+    {
+      "src": "icon1.png",
+      "title": "enter some text enter some t",
+      "date": "2022-07-12",
+      "description": "enter some text enter some t",
+      "id": 5
+    },
+    {
+      "src": "person.png",
+      "title": "pratik sathawara",
+      "date": "2022-07-06",
+      "description": "dgdfgdfgdfgfdgdfgdg",
+      "id": 6
+    }
+  ],
+  "evtRegister": [
+    {
+      "id": 1,
+      "name": "Pratik m Sathawara",
+      "email": "pratik@gmail.com",
+      "title": "Graphic WORKSHOP",
+      "study": "ME",
+      "address": "Ahmedabad"
+    },
+    {
+      "id": 2,
+      "name": "Pratik m sathawara",
+      "email": "sathavarapratik76@gmail.com",
+      "title": "HTML 5 WORKSHOP",
+      "study": "BE",
+      "address": "chandkheda"
+    },
+    {
+      "id": 3,
+      "name": "jatin",
+      "email": "jatin@gmail.com",
+      "title": "HTML 5 WORKSHOP",
+      "study": "BE",
+      "address": "chandkheda"
+    },
+    {
+      "id": 4,
+      "name": "pratik mahendrabhai sathawara",
+      "email": "sathavarapratik76@gmail.com",
+      "title": "HTML 5 WORKSHOP",
+      "study": "fdgfdg",
+      "address": "114/691, KHODIYAR NAGAR"
+    }
+  ],
+  "profassiormsg": [
+    {
+      "image": "about_studio_img_1.jpg",
+      "masg": "sdfdsfdsf",
+      "name": "pratik mahendrabhai",
+      "city": "Ahmedabad",
+      "id": 1
+    },
+    {
+      "image": "background.png",
+      "masg": "sdfdsfdsf",
+      "name": "pratik mahendrabhai",
+      "city": "Ahmedabad",
+      "id": 2
+    },
+    {
+      "image": "background.png",
+      "masg": "sdfdsfdsf",
+      "name": "pratik mahendrabhai",
+      "city": "sdfsdfsdf",
+      "id": 3
+    }
+  ],
+  "contactus": [
+    {
+      "id": 1,
+      "name": "Pratik m Sathawara",
+      "email": "pratik@gmail.com",
+      "phone": 1234567890,
+      "msgs": "this is a special msg"
+    },
+    {
+      "id": 2,
+      "name": "Pratik m sathawara",
+      "email": "psathawara@tree.com",
+      "phone": 769885847658,
+      "msgs": "dfssd sd sd sds ds ds ds dsd sdsd"
+    },
+    {
+      "id": 3,
+      "name": "jatin ",
+      "email": "jatin@gmail.com",
+      "phone": 7985654525,
+      "msgs": "Hi sir i am intrusted in angular class if you give traning than call me on my number - thanks"
+    },
+    {
+      "id": 4,
+      "name": "pratik mahendrabhai sathawara",
+      "email": "sathavarapratik76@gmail.com",
+      "phone": 7698158645,
+      "msgs": "sadadsadsadad"
+    },
+    {
+      "id": 5,
+      "name": "yogesh bhai",
+      "email": "abc@gmail.com",
+      "phone": 7698158645,
+      "msgs": "hello hi how are you"
+    }
+  ],
+  "Admin-register": [
+    {
+      "id": 1,
+      "imgpath": "icon1.png",
+      "fullname": "jatin r purabiya",
+      "username": "Ramesh@123",
+      "psw": "Ramesh@1234",
+      "mobileno": 87878787878,
+      "address": "sudarshan nagar",
+      "gender": "Male"
+    },
+    {
+      "id": 2,
+      "imgpath": "angular.png",
+      "fullname": "jatin r purabiya",
+      "username": "Ramesh@123",
+      "psw": "Ramesh@123",
+      "mobileno": 87878787878,
+      "address": "sudarshan nagar",
+      "gender": "Male"
+    },
+    {
+      "id": 3,
+      "imgpath": "gradient.png",
+      "fullname": "jignesh m sathawara",
+      "username": "mehul@gmail.com",
+      "psw": "sdsdsdsdsd",
+      "gender": "Male",
+      "mobileno": 474747474,
+      "address": "chandkheda"
+    },
+    {
+      "id": 4,
+      "fullname": "Pratik m sathawara",
+      "username": "pratik@gmail.com",
+      "psw": "prince@123",
+      "gender": "Male",
+      "mobileno": 76857818625,
+      "address": "chandkheda",
+      "imgpath": "person.png"
+    },
+    {
+      "id": 5,
+      "imgpath": "about_studio_img_1.jpg",
+      "fullname": "pratik mahendrabhai",
+      "username": "psathawar",
+      "psw": "abcd",
+      "gender": "Male",
+      "mobileno": 7698158645,
+      "address": "114/691, KHODIYAR NAGAR"
+    },
+    {
+      "id": 6,
+      "imgpath": "icon2.png",
+      "fullname": "pratik mahendrabhai sathawara",
+      "username": "psathawara@gmail.com",
+      "psw": "dsfsrddsf",
+      "gender": "Female",
+      "mobileno": 7698158645,
+      "address": "114/691, KHODIYAR NAGAR"
+    },
+    {
+      "fullname": "pratik mahendrabhai sathawara",
+      "username": "mehul@gmail.com",
+      "psw": "mehul@123",
+      "conformpass": "mehul@123",
+      "gender": "Male",
+      "mobileno": 7698158645,
+      "address": "114/691, KHODIYAR NAGAR",
+      "imgpath": "bootstrap.webp",
+      "id": 7
+    }
+  ],
+  "Admin_registerid": [
+    {
+      "id": 1,
+      "imgpath": "person2.png"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ]
+}

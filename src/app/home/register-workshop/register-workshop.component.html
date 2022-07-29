@@ -1,0 +1,47 @@
+<div class="container">
+    <h2>Register Workshop</h2>
+    <br>
+    <form [formGroup]="pass" (ngSubmit)="submitdata(pass)">
+        <div class="form-group">
+            <input type="text" formControlName="name" name="name"  placeholder="Enter full name" class="form-control" />
+            <span class="text-danger" *ngIf="!name?.valid && (name?.touched || name?.dirty)" >
+                <span *ngIf="name?.errors.required">
+                   Please enter your name</span>
+            </span>
+        </div>
+        <div class="form-group">
+            <input type="email" formControlName="email" name="email"  placeholder="Enter full email" class="form-control" />
+            <span class="text-danger" *ngIf="!email?.valid && (email?.touched || email?.dirty)" >
+                <span *ngIf="!email?.errors.required">
+                   Please enter your email 
+                </span>
+                <span *ngIf="email?.errors.email">please enter right email</span>
+                </span>
+        </div>
+        <div class="form-group">
+            <select name="title" id="title" class="form-control" formControlName="title" >
+                <option  *ngFor="let dat of pushdata" value="{{dat.title}}" >{{dat.title}}</option>
+            </select>
+            <span class="text-danger" *ngIf="!title?.valid && (title?.touched || title?.dirty)" >
+                   please select workshop 
+                </span>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="study" name="study" placeholder="Enter full study" class="form-control"/>
+            <span class="text-danger" *ngIf="!study?.valid && (study?.touched || study?.dirty)" >
+                please enter your Qualification 
+             </span>
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="address" name="address"  placeholder="Enter full State" class="form-control"/>
+            <span class="text-danger" *ngIf="!address?.valid && (address?.touched || address?.dirty)" >
+                please enter your Address 
+             </span>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" >Submit Request</button>
+          
+        </div>
+        <a routerLink="/" class="btn btn-danger btn-center">Home</a>
+    </form>
+</div>

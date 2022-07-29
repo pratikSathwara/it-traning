@@ -1,0 +1,47 @@
+<div class=" banner-login">
+    <div class="container">
+       <div class="register">
+<h2 >Edit Workshop</h2>
+<div class="row">
+    <div class="col-xs-12">
+    <form [formGroup]="passdata" (ngSubmit)="submitdata(passdata)">
+
+    <div class="inputBox">
+        <input type="text" name="src" formControlName="src" readonly>
+        <input type="file" name="src" formControlName="src"  (change)=onselectedFile()  id="src" [(ngModel)]="editdata.src"  placeholder="enter title" />
+        <label for="fullname"><i class="fa fa-user"></i> Image :</label>
+        <span class="text-danger" *ngIf="!src?.valid && (src?.touched || src?.dirty)" >
+            Please enter your src 
+         </span> 
+    </div>
+    <div class="inputBox">
+        <input type="text" formControlName="title" [(ngModel)]="editdata.title" name="title" placeholder="enter title"  />
+        <label for="username"><i class="fa fa-user"></i> UserName :</label>
+        <span class="text-danger" *ngIf="!title?.valid && (title?.touched || title?.dirty)" >
+            Please enter your title 
+         </span> 
+    </div>
+    <div class="inputBox">
+        <input type="text" name="date" formControlName="date" readonly>
+        <input type="date" name="date" formControlName="date" [(ngModel)]="editdata.date"   />
+        <label for="Date"><i class="fa fa-calander"></i> Date :</label>
+        <span class="text-danger" *ngIf="!date?.valid && (date?.touched || date?.dirty)" >
+            Please enter your date 
+         </span> 
+    </div>
+    <div class="inputBox">
+        <textarea name="description" formControlName="description" [(ngModel)]="editdata.description" placeholder="enter description" class="form-control input-lg"></textarea>
+        <label for="description"><i class="fa fa-user"></i> Description :</label>
+        <!-- <span class="text-danger" *ngIf="!description?.valid && (description?.touched || description?.dirty)" >
+            Please enter your description 
+         </span>  -->
+    </div>
+    <div class="inputBox btn-group">
+        <button class="btn btn-success btn-lg" >Submit</button>
+        <button class="btn btn-success btn-lg" (click)="close()">Close</button>
+
+    </div>
+    </form>
+    </div>
+</div>
+</div></div></div>

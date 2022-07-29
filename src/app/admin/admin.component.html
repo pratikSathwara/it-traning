@@ -1,0 +1,40 @@
+<script src="/src/assets/js/custom.js"></script>
+<div class="main">
+    <div id="sidebar">
+
+       <ul class="Amenu">
+          <li><a [routerLink]="['/admin']" routerLinkActive="active" (click)="setPageTitle('Dashboard')"> Home</a></li>
+          <li><a [routerLink]="['/admin/addslider']" routerLinkActive="active" (click)="setPageTitle('Add slider')"> Register slider</a></li>
+
+          <li><a [routerLink]="['/admin/Add-workshop']" routerLinkActive="active" (click)="setPageTitle('Add workshop')"> Register workshop</a></li>
+
+          <li><a [routerLink]="['/admin/displayWorkshop']" routerLinkActive="active" (click)="setPageTitle('Display workshop')"> Total Workshop</a></li>
+          <li><a [routerLink]="['/admin/registerWorkshopData']" routerLinkActive="active" (click)="setPageTitle('Workshops data')"> Workshops Registeration</a></li>
+           <li><a [routerLink]="['/admin/contectData']" routerLinkActive="active" (click)="setPageTitle('Contect Data')"> Contect Data</a></li> 
+           <li><a [routerLink]="['/admin/addadmin']" routerLinkActive="active" (click)="setPageTitle('Add Admin')"> Register Admin</a></li>
+           <li><a [routerLink]="['/admin/displayadmin']" routerLinkActive="active" (click)="setPageTitle('Display Admin')"> Total Admin</a></li>
+       </ul>
+      
+       <p class="hide_show hide_show-mobile" ><i class="fa fa-bars" aria-hidden="true" onclick="myFunction()"></i></p>
+
+    </div>
+   
+    <div class="main-content">
+         <div class="header">
+            <h2 class="title"> <p class="hide_show" id="hide_show"><i class="fa fa-bars" aria-hidden="true" onclick="myFunction()"></i></p> {{title}}</h2>  
+            <div class="dropdown profile">
+               <img src="{{imgpath}}{{imgpathname|async}}" alt="" id="menu1" data-toggle="dropdown" class=" dropdown-toggle">
+               <ul class="dropdown-menu dropdown-menu-right tip" role="menu" aria-labelledby="menu1">
+                  <li><a routerLink="profile" routerLinkActive="active">Profile</a></li>                  
+                  <li><a routerLink="changePass"routerLinkActive="active" >Change Password</a></li>
+                  <li class="divider"></li>
+                  <li><a routerLink="/" routerLinkActive="active">Log Out</a></li>
+                  
+               </ul>
+            </div>
+         </div>
+         <router-outlet></router-outlet>
+     
+
+        
+        
